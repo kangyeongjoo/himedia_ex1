@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App - Fastapi</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+  </head>
+  <body>
+    <div style="margin-top: 50px" class="ui container">
+      <h1 class="ui center aligned header">Fastapi ToDo App</h1>
+
+      <form class="ui form">
+        <div class="field">
+          <label>문자 바꾸기 예제</label>
+          <input id="ip_text" type="text" placeholder="Enter ToDo task..." />
+          <br />
+        </div>
+        <button
+          type="button"
+          id="bt1"
+          class="ui blue button"
+          onclick="changeText()"
+        >
+          Change
+        </button>
+      </form>
+
+      <h1>Hello, World!</h1>
+      <p>This is a simple HTML response from FastAPI.</p>
+      <p>안녕하세요 웹페이지를 띄우는 기본 예제입니다.</p>
+      <p>이 예제는 입력받은 텍스트를 웹페이지에 출력합니다</p>
+
+      <p id="show_text"></p>
+    </div>
+  </body>
+</html>
+
+<script>
+  function changeText() {
+    var inputText = document.getElementById("ip_text").value;
+    var display = document.getElementById("show_text");
+    display.innerHTML = inputText;
+  }
+</script>
